@@ -1,0 +1,96 @@
+$primary: #33dcc3;
+$primary-gradient: #1a9cde;
+$text-color: #fff;
+$button-color: #ff0000;
+
+.form {
+  padding: 30px;
+  background: linear-gradient(to bottom, $primary 0, $primary-gradient 100%);
+
+  &__body {
+    text-align: center;
+    color: $text-color;
+  }
+
+  &__title {
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  &__subtitle {
+    font-size: 0.9rem;
+    padding: 0 20px;
+    line-height: 1.3;
+  }
+
+  &__button {
+    display: block;
+    margin: 10px auto;
+    width: 350px;
+    height: 80px;
+    border: none;
+    border-radius: 40px;
+    border: 2px solid $text-color;
+    background: $button-color;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 80px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: $text-color;
+  }
+
+  &__timer {
+    margin-bottom: 20px;
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+  }
+
+  &__legacy {
+    font-size: 0.9rem;
+    line-height: 1;
+
+    &-checkbox {
+      appearance: auto;
+    }
+  }
+
+  .input {
+    display: block;
+    margin: 0 auto 20px;
+    padding: 0 20px 0 62px;
+    width: 350px;
+    height: 72px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #000;
+    }
+
+    &__wrapper {
+
+    }
+
+    &__label {
+      font-size: 0.9rem;
+      padding: 0 20px;
+      line-height: 1.3;
+      padding-bottom: 10px;
+    }
+
+    &__helper-text {
+
+    }
+  }
+}

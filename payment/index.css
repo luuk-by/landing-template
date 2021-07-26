@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 480px;
+  background: #ddd;
+  cursor: default;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 480px;
+  background: #fff;
+}
+
+.first {
+  padding-top: 15px;
+}
+
+.first > h2 {
+  text-align: center;
+  font-size: 29px;
+}
+
+.first > p {
+  padding-top: 7px;
+  text-align: center;
+}
+
+.first > img {
+  width: 480px;
+}

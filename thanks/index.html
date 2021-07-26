@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=480" />
+    <title>Страница благодарности</title>
+    <link rel="shortcut icon" href="./icons/favicon.ico" type="image/x-icon" />
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="../css/form.css" />
+
+      
+  </head>
+  <body>
+    <div class="wrapper">
+       <div class="main__content">
+        <h1 class="main__title">Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.</h1>
+        <p class="main__text_check">Проверьте ваши данные:</p>
+        <p class="main__blocks">
+        </p>
+        <div class="header__inputs">
+          <div class="inputs_block">
+            <span class="inputs_span">Имя: </span>
+            <input class="inputs_input" readonly="" name="name">
+          </div>
+          <div class="inputs_block">
+            <span class="inputs_span">Телефон: </span>
+            <input class="inputs_input" readonly="" name="phone" >
+          </div>
+        </div>
+        <p class="main__buttons">
+          <button class="main__button" id="edit-button">
+            Исправить
+          </button>
+        </p>
+      </div>
+
+      <div class="cards">
+        <h2 class="cards__title">
+          Забери товары <p class="cards__title--blue">с 70% скидкой</p>
+        </h2>
+        <div class="cards__wrapper"></div>
+      </div>
+
+      <footer>
+        <div class="pol">
+          <a href="../politics/politics.html">Политика конфиденциальности</a>
+        </div>
+        <div class="dos">
+          <a href="../payment/index.html">Пример платежного документа</a>
+        </div>
+        <div class="of">
+          <a href="../oferta/oferta.pdf">Договор оферты</a>
+        </div>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__shadow"></div>
+      <div class="modal__body">
+        <form id="form" class="form">
+          <div class="form__body">
+            <div class="form__title">Исправить данные</div>
+            <div class="input__wrapper">
+              <div class="input__label"></div>
+              <input class="input" type="text" name="name" placeholder="Введите имя" required="" id="name" />
+              <div class="input__helper-text"></div>
+            </div>
+            <div class="input__wrapper">
+              <div class="input__label">
+                Напишите свой номер с кодом после +375<br />
+                Пример: (29)1234567
+              </div>
+              <input class="input" type="tel" name="phone" placeholder="+375(__)___-__-__" required id="phone" />
+              <div class="input__helper-text"></div>
+            </div>
+            <input id="key" type="hidden" name="key" />
+            <button class="form__button">Обновить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/jquery.js" type="text/javascript"></script>
+    <script src="../js/jquery.inputmask.js" type="text/javascript"></script>
+    <script src="../js/sweetalert.js" type="text/javascript"></script>
+    <script src="../js/updateForm.js" type="text/javascript"></script>
+    <script src="../js/addProduct.js" type="text/javascript"></script>
+    <script src="../js/modalManager.js" type="text/javascript"></script>
+    <script src="../js/orderManager.js" type="text/javascript"></script>
+    <script src="../js/formHelpers.js" type="text/javascript"></script>
+  </body>
+</html>

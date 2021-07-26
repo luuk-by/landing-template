@@ -1,0 +1,18 @@
+[
+  {
+    "id": "videoregistrator",
+    "title": "Видеорегистратор-зеркало",
+    "text": "Антирадар, камер, G-sensor, Full HD съемка",
+    "image": "./img/zerkalo.png",
+    "oldPrice": 180,
+    "price": 89.99
+  }, 
+  {
+    "id": "clean_robot",
+    "title": "Робот пылесос",
+    "text": "Для сухой и влажной уборки",
+    "image": "./img/robot.jpeg",
+    "oldPrice": 200,
+    "price": 99.99
+  }
+]
