@@ -1,4 +1,4 @@
-const FORM_IDS = ['form'];
+const FORM_IDS = ['form', 'form-modal'];
 
 const formListener = async (formId) => {
   const formValues = FormHelpers.getFormValues($(`#${formId}`));
@@ -18,6 +18,11 @@ const formListener = async (formId) => {
 }
 
 const appendListeners = () => {
+  const edit = document.querySelector('#call');
+  edit.addEventListener('click', async (e) => {
+    const modal = document.querySelector('.modal');
+    ModalManager.openModal(modal);
+  });
   FORM_IDS.forEach((id) => {
     const form = document.querySelector(`#${id}`);
     form.addEventListener('submit', async (e) => {

@@ -1,11 +1,3 @@
-.call {
-  transform-style: preserve-3d;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  animation: flip 5000ms ease-in infinite;
-}
-
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -24,40 +16,111 @@
   }
 }
 
+@keyframes flip-back {
+  0% {
+    transform: rotateY(180deg);
+  }
+  20% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(0deg);
+  }
+  70% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+.call {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+  animation: flip 3000ms ease-in infinite;
+}
+
+.call__container {
+  perspective: 1000;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
 .call img {
   color: #fff;
 }
 
 .call__front {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: rotateY(0deg);
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
   border-radius: 50%;
   background-color: #3dd2ff;
   border: none;
   color: #fff;
-  backface-visibility: hidden;
-  z-index: 2;
-  transform: rotateY(0deg);
-  position: absolute;
   box-shadow: 0px 0px 12px #e0e0e0;
 }
 
 .call__back {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  visibility: visible;
+  backface-visibility: hidden;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
   cursor: pointer;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 10px;
   border-radius: 50%;
   background-color: #3dd2ff;
   border: none;
   color: #fff;
-  backface-visibility: hidden;
-  transform: rotateY(-180deg);
-  position: relative;
   box-shadow: 0px 0px 12px #ccc;
+}
+
+.call__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.call__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.call__image {
+  width: 100%;
+  height: 100%;
+}
+
+.call__text {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.2;
 }
 /*# sourceMappingURL=phone.css.map */

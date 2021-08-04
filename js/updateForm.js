@@ -4,7 +4,7 @@ const updateInputs = (formValues = {}) => {
   const localValues = FormHelpers.getWithExpiry('userInfo');
   const values = { ...localValues, ...formValues };
   if (!values.phone) {
-    window.location.replace('../')
+    window.location.replace(currentRootPath)
     return;
   }
 
@@ -45,6 +45,11 @@ const formListener = async (formId) => {
 }
 
 const appendListeners = () => {
+  const edit = document.querySelector('#edit-button');
+  edit.addEventListener('click', async (e) => {
+    const modal = document.querySelector('.modal');
+    ModalManager.openModal(modal);
+  });
   FORM_IDS.forEach((id) => {
     const form = document.querySelector(`#${id}`);
     form.addEventListener('submit', async (e) => {

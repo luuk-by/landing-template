@@ -10,6 +10,7 @@
             <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
             <link rel="stylesheet" href="css/main.css" />
             <link rel="stylesheet" href="css/form.css" />
+            <link rel="stylesheet" href="css/modal.css" />
             <link rel="stylesheet" href="css/phone.css" />
             <!-- Facebook Pixel Code -->
             <script>
@@ -337,14 +338,21 @@
                             </label>
                         </div>
                     </form>
-                    <a class="call" href="tel:+375000000000">
-                        <div class="call__front">
-                            <img src="./icons/telephone.svg" />
+                    <div id="call" class="call__container">
+                        <div class="call">
+                            <div class="call__front">
+                                <div class="call__body">
+                                    <img class="call__icon" src="./icons/telephone.svg" />
+                                    <div class="call__text">Бесплатный звонок</div>
+                                </div>
+                            </div>
+                            <div class="call__back">
+                                <div class="call__body">
+                                    <img class="call__image" src="./images/manager.png" />
+                                </div>
+                            </div>
                         </div>
-                        <div class="call__back">
-                            <img src="./icons/telephone.svg" />
-                        </div>
-                    </a>
+                    </div>
                 </section>
                 <footer>
                     <p style="font-size: 15px; padding: 15px; text-align: center; user-select: none">
@@ -355,16 +363,49 @@
                         <a href="./politics/politics.html">Политика конфиденциальности</a>
                     </p>
                 </footer>
+
+                <div class="modal">
+                    <div class="modal__shadow"></div>
+                    <div class="modal__body">
+                        <form id="form-modal" class="form">
+                            <div class="form__body">
+                                <div class="form__title">Остались Вопросы?</div>
+                                <div class="form__subtitle">Заполните форму и наши менеджеры свяжутся с вами для консультации</div>
+                                <div class="input__wrapper">
+                                    <div class="input__label"></div>
+                                    <input class="input" type="text" name="name" placeholder="Введите имя" required="" id="name" />
+                                    <div class="input__helper-text"></div>
+                                </div>
+                                <div class="input__wrapper">
+                                    <div class="input__label">
+                                        Напишите свой номер с кодом после +375<br />
+                                        Пример: (29)1234567
+                                    </div>
+                                    <input class="input" type="tel" name="phone" placeholder="+375(__)___-__-__" required id="phone" />
+                                    <div class="input__helper-text"></div>
+                                </div>
+                                <button class="form__button">Отправить</button>
+                                <label class="form__legacy">
+                                    <input class="form__legacy-checkbox" type="checkbox" checked required />
+                                    Я согласен с политикой конфиденциальности и пользовательским соглашением
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
 
             <script src="./js/jquery.js" type="text/javascript"></script>
             <script src="./js/jquery.inputmask.js" type="text/javascript"></script>
             <script src="./js/sweetalert.js" type="text/javascript"></script>
+            <script src="./js/config.js" type="text/javascript"></script>
             <script src="./js/addForm.js" type="text/javascript"></script>
             <script src="./js/main.js" type="text/javascript"></script>
             <script src="./js/app.js" type="text/javascript"></script>
             <script src="./js/orderManager.js" type="text/javascript"></script>
+            <script src="./js/modalManager.js" type="text/javascript"></script>
             <script src="./js/formHelpers.js" type="text/javascript"></script>
+            <script src="./js/autoPopupManager.js" type="text/javascript"></script>
         </body>
     </head>
 </html>

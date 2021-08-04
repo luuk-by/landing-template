@@ -54,7 +54,9 @@
 }
 
 .form__legacy-checkbox {
-  appearance: auto;
+  appearance: checkbox;
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
 }
 
 .form .input {

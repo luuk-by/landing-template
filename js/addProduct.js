@@ -2,7 +2,7 @@ const addGoods = async () => {
   let goods = []
   try {
     goods = await new Promise((resolve, reject) => {
-      $.getJSON('./js/goods.json', resolve);
+      $.getJSON(`${currentRootPath}/js/thanks_products.json`, resolve);
     });
   } catch (err) {
     console.log('json error')

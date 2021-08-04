@@ -57,7 +57,9 @@ $button-color: #ff0000;
     line-height: 1;
 
     &-checkbox {
-      appearance: auto;
+      appearance: checkbox;
+      -webkit-appearance: checkbox;
+      -moz-appearance: checkbox;
     }
   }
 
