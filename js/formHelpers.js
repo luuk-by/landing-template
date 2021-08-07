@@ -2,9 +2,11 @@ const FormHelpers = {
   getFormValues: (form) => {
     return form
       .serializeArray()
-      .reduce(function (obj, item) {
-        obj[item.name] = item.value;
-        return obj;
+      .reduce((obj, item) => {
+        return {
+          ...obj,
+          [item.name]: item.value,
+        };
       }, {});
   },
   validatePhone: (phoneValue) => {
@@ -16,6 +18,13 @@ const FormHelpers = {
       const phone = phoneValue.match(/\d/g).join('');
       if (phone.length !== 12) {
         Swal.fire('Неправильный номер', 'Введите номер в формате<br/> +375(__)___-__-__')
+        return false;
+      }
+      const CODES = ['17', '25', '29', '33', '44']
+      const code = phone.slice(3, 5)
+
+      if (CODES.indexOf(code) !== -1) {
+        Swal.fire('Неправильный код телефона', 'Проверьте правильность введенного номера')
         return false;
       }
       return true;
