@@ -8,6 +8,7 @@
     $id = $_POST['id'];
     $title = $_POST['title'];
     $price = $_POST['price'];
+    $method = $_POST['method'];
 
     $name = $_POST['name'];
     $phone = $_POST['phone'];
@@ -16,6 +17,10 @@
         'order' => json_encode(array(
             'firstName' => $name,
             'phone' => $phone,
+            'customFields' => array(
+                'id_osnovnogo' => $id,
+            ),
+            'orderMethod' => $method,
             'items' => array(
                 array(
                     'initialPrice' => $price,

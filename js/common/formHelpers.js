@@ -27,7 +27,6 @@ const FormHelpers = {
         Swal.fire('Неправильный код телефона', 'Проверьте правильность введенного номера')
         return false;
       }
-      console.log('VALIDATED')
       return true;
     } catch (err) {
       console.log('validation error');
