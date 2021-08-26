@@ -1,11 +1,3 @@
-@font-face {
-    font-family: "Roboto Condensed";
-    src: url(../fonts/RobotoCondensed-Bold.eot);
-    src: url(../fonts/RobotoCondensed-Boldd41d.eot) format("embedded-opentype"), url(../fonts/RobotoCondensed-Bold.woff2) format("woff2"), url(fonts/RobotoCondensed-Bold.woff) format("woff");
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
 body {
     min-width: 480px;
     background: #fff;
