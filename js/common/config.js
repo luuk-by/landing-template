@@ -1,4 +1,5 @@
-const SKIP_PATHS = ['thanks']
+const SKIP_PATHS = ['core']
+
 const getRootPath = () => {
   const { href } = window.location;
   const paths = href.split('/')
@@ -9,4 +10,5 @@ const getRootPath = () => {
   }
   return `${paths.join('/')}`;
 }
+
 const currentRootPath = getRootPath();

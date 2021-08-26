@@ -4,7 +4,7 @@ const updateInputs = (formValues = {}) => {
   const localValues = FormHelpers.getWithExpiry('userInfo');
   const values = { ...localValues, ...formValues };
   if (!values.phone) {
-    window.location.replace(currentRootPath)
+    // window.location.replace(currentRootPath)
     return;
   }
 

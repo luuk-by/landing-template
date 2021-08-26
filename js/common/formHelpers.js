@@ -23,10 +23,11 @@ const FormHelpers = {
       const CODES = ['17', '25', '29', '33', '44']
       const code = phone.slice(3, 5)
 
-      if (CODES.indexOf(code) !== -1) {
+      if (CODES.indexOf(code) === -1) {
         Swal.fire('Неправильный код телефона', 'Проверьте правильность введенного номера')
         return false;
       }
+      console.log('VALIDATED')
       return true;
     } catch (err) {
       console.log('validation error');
