@@ -18,8 +18,9 @@
             'firstName' => $name,
             'phone' => $phone,
             'customFields' => array(
-                'visosiblyad' => 'new',
                 'id_osnovnogo' => $id,
+                'visosiblyad' => 'new',
+                'ab_pososi' => 'yes',
             ),
             'orderMethod' => $method,
             'items' => array(
@@ -55,6 +56,7 @@
     $order_id = json_encode($result['id']);
 
     $text = "
+        Допродажа.
         Информация о покупателе:
 
         Имя: ".$_POST['name']."

@@ -44,7 +44,7 @@ const OrderManager = {
       body = {
         ...formData,
         price: item.price,
-        title: item.title
+        title: item.title,
       };
     } catch (err) {
       console.log('json error');
@@ -52,7 +52,7 @@ const OrderManager = {
     }
 
     try {
-      await $.post(`${currentRootPath}/php/send.php`, body);
+      await $.post(`${currentRootPath}/php/add.php`, body);
     } catch (err) {
       console.log('send error');
       throw new Error();
