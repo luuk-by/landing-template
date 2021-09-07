@@ -20,7 +20,7 @@
             'customFields' => array(
                 'id_osnovnogo' => $id,
                 'visosiblyad' => 'new',
-                'ab_pososi' => 'yes',
+                'ab_pososi' => true,
             ),
             'orderMethod' => $method,
             'items' => array(
